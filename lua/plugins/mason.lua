@@ -1,8 +1,7 @@
 local mason_lsp_ensure_installed = {
-	"typescript-language-server",
+	"ts_ls",
 	"eslint",
 	"gopls",
-	"golangci-lint",
 }
 
 local mason_null_ls_ensure_installed = {
