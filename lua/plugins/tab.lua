@@ -1,6 +1,6 @@
 return {
 	"romgrk/barbar.nvim",
-	tag = "v1.9.1",
+	version = "v1.9.1",
 	lazy = true,
 	event = "VimEnter",
 	opts = {

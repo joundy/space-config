@@ -32,7 +32,7 @@ return {
 					},
 				},
 				"L3MON4D3/LuaSnip",
-				tag = "v2.3.0",
+				version = "v2.3.0",
 				lazy = true,
 				event = "InsertEnter",
 				build = "make install_jsregexp",
