@@ -1,7 +1,8 @@
 return {
 	"nvim-tree/nvim-tree.lua",
 	tag = "v1.7.0",
-	lazy = false,
+	lazy = true,
+	cmd = { "NvimTreeToggle", "NvimTreeFocus" },
 	opts = {
 		filters = {
 			dotfiles = false,

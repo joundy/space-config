@@ -1,7 +1,8 @@
 return {
 	"rebelot/heirline.nvim",
 	tag = "v1.0.6",
-	lazy = false,
+	lazy = true,
+	event = "VimEnter",
 	priority = 5000,
 	config = function()
 		local heirline = require("heirline")

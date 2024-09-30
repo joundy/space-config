@@ -1,7 +1,8 @@
 return {
 	"romgrk/barbar.nvim",
 	tag = "v1.9.1",
-	lazy = false,
+	lazy = true,
+	event = "VimEnter",
 	opts = {
 		-- lazy.nvim will automatically call setup for you. put your options here, anything missing will use the default:
 		-- animation = true,

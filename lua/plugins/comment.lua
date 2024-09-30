@@ -15,7 +15,8 @@ return {
 	"numToStr/Comment.nvim",
 	branch = "master",
 	commit = "e30b7f2008e52442154b66f7c519bfd2f1e32acb",
-	lazy = false,
+	lazy = true,
+	event = { "BufReadPost", "BufNewFile" },
 	config = function()
 		local comment = require("Comment")
 

@@ -15,7 +15,8 @@ return {
 	{
 		"williamboman/mason.nvim",
 		tag = "v1.10.0",
-		lazy = false,
+		lazy = true,
+		event = "VeryLazy",
 		config = function()
 			require("mason").setup()
 		end,
@@ -24,7 +25,8 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		tag = "v1.31.0",
 		priority = 1500,
-		lazy = false,
+		lazy = true,
+		event = { "BufReadPre", "BufNewFile" },
 		config = function()
 			local null_ls = require("null-ls")
 			local mason_lspconfig = require("mason-lspconfig")
@@ -68,7 +70,8 @@ return {
 		"jay-babu/mason-null-ls.nvim",
 		tag = "v2.6.0",
 		priority = 1500,
-		lazy = false,
+		lazy = true,
+		event = { "BufReadPre", "BufNewFile" },
 		config = function()
 			local mason_null_ls = require("mason-null-ls")
 			-- local null_ls = require("null-ls")
