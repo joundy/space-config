@@ -3,21 +3,16 @@ return {
 	version = "v0.1.7",
 	lazy = false,
 	priority = 2000,
+	keys = {
+		{ "gd", vim.lsp.buf.definition, desc = "Go to definition", mode = "n" },
+		{ "gD", vim.lsp.buf.declaration, desc = "Go to declaration", mode = "n" },
+		{ "<space>lr", vim.lsp.buf.rename, desc = "Rename symbol", mode = "n" },
+		{ "K", vim.lsp.buf.hover, desc = "Show hover information", mode = "n" },
+		{ "<leader>ld", "<cmd>lua vim.diagnostic.open_float()<cr>", desc = "Open diagnostic float", mode = "n" },
+		{ "<Leader>lR", function() require("telescope.builtin").lsp_references() end, desc = "List references", mode = "n" },
+		{ "<leader>lD", function() require("telescope.builtin").diagnostics() end, desc = "List diagnostics", mode = "n" },
+	},
 	config = function()
-		-- Keymaps
-		local keymap = vim.keymap.set
-		local opts = { noremap = true, silent = true }
-
-		keymap("n", "gd", vim.lsp.buf.definition, opts)
-		keymap("n", "gD", vim.lsp.buf.declaration, opts)
-		keymap("n", "<space>lr", vim.lsp.buf.rename, opts)
-		keymap("n", "K", vim.lsp.buf.hover, opts)
-
-		keymap("n", "<leader>ld", "<cmd>lua vim.diagnostic.open_float()<cr>", opts)
-
-		local builtinTelescope = require("telescope.builtin")
-
-		keymap("n", "<Leader>lR", builtinTelescope.lsp_references, opts)
-		keymap("n", "<leader>lD", builtinTelescope.diagnostics, opts)
+		-- Any additional configuration can go here
 	end,
 }
