@@ -1,7 +1,7 @@
 return {
 	{
 		"lewis6991/gitsigns.nvim",
-		tag = "v0.9.0",
+		version = "v0.9.0",
 		lazy = true,
 		event = { "BufReadPre", "BufNewFile" },
 		opts = {},

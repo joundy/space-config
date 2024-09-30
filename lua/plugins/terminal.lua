@@ -1,7 +1,7 @@
 -- File Explorer / Tree
 return {
 	"akinsho/toggleterm.nvim",
-	tag = "v2.12.0",
+	version = "v2.12.0",
 	lazy = true,
 	keys = {
 		{

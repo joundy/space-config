@@ -11,15 +11,15 @@ return {
 	},
 	{
 		"nvim-lua/plenary.nvim",
-		tag = "v0.1.4",
+		version = "v0.1.4",
 	},
 	{
 		"stevearc/dressing.nvim",
-		tag = "v3.0.0",
+		version = "v3.0.0",
 	},
 	{
 		"MunifTanjim/nui.nvim",
-		tag = "0.3.0",
+		version = "0.3.0",
 	},
 	{
 		"zbirenbaum/copilot.lua",
@@ -29,7 +29,7 @@ return {
 	},
 	{
 		"HakonHarnes/img-clip.nvim",
-		tag = "v0.5.0",
+		version = "v0.5.0",
 		lazy = true,
 		event = "VeryLazy",
 		opts = {
@@ -45,7 +45,7 @@ return {
 	},
 	{
 		"MeanderingProgrammer/render-markdown.nvim",
-		tag = "v7.2.0",
+		version = "v7.2.0",
 		opts = {
 			file_types = { "markdown", "Avante" },
 		},

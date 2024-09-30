@@ -1,6 +1,6 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
-	tag = "v0.9.2",
+	version = "v0.9.2",
 	lazy = true,
 	event = { "BufReadPost", "BufNewFile" },
 	opts = {

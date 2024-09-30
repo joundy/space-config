@@ -13,7 +13,7 @@ local mason_null_ls_ensure_installed = {
 return {
 	{
 		"williamboman/mason.nvim",
-		tag = "v1.10.0",
+		version = "v1.10.0",
 		lazy = false,
 		config = function()
 			require("mason").setup()
@@ -21,7 +21,7 @@ return {
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",
-		tag = "v1.31.0",
+		version = "v1.31.0",
 		priority = 1500,
 		lazy = false,
 		config = function()
@@ -31,7 +31,7 @@ return {
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 			local on_attach = function(client, bufnr)
-				null_ls.on_attach(client, bufnr)
+				-- null_ls.on_attach(client, bufnr)
 			end
 
 			mason_lspconfig.setup({
@@ -65,7 +65,7 @@ return {
 	},
 	{
 		"jay-babu/mason-null-ls.nvim",
-		tag = "v2.6.0",
+		version = "v2.6.0",
 		priority = 1500,
 		lazy = false,
 		config = function()

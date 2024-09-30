@@ -1,6 +1,6 @@
 return {
 	"nvim-tree/nvim-tree.lua",
-	tag = "v1.7.0",
+	version = "v1.7.0",
 	lazy = true,
 	cmd = { "NvimTreeToggle", "NvimTreeFocus" },
 	keys = {
