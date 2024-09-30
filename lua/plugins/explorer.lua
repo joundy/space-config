@@ -4,9 +4,9 @@ return {
 	lazy = true,
 	cmd = { "NvimTreeToggle", "NvimTreeFocus" },
 	keys = {
-		{ "<Leader>ee", "<Cmd>NvimTreeToggle<CR>", desc = "Toggle NvimTree" },
-		{ "<Leader>er", "<Cmd>NvimTreeRefresh<CR>", desc = "Refresh NvimTree" },
-		{ "<Leader>ef", "<Cmd>NvimTreeFocus<CR>", desc = "Focus NvimTree" },
+		{ "<Leader>ee", "<Cmd>NvimTreeToggle<CR>",   desc = "Toggle NvimTree" },
+		{ "<Leader>er", "<Cmd>NvimTreeRefresh<CR>",  desc = "Refresh NvimTree" },
+		{ "<Leader>ef", "<Cmd>NvimTreeFocus<CR>",    desc = "Focus NvimTree" },
 		{ "<Leader>e/", "<Cmd>NvimTreeFindFile<CR>", desc = "Find file in NvimTree" },
 	},
 	opts = {
