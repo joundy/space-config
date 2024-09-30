@@ -8,10 +8,5 @@ return {
 	opts = {},
 	config = function(_, opts)
 		require("hop").setup(opts)
-
-		-- Keymaps
-		local keymap = vim.keymap.set
-
-		keymap("n", "f", "<Cmd>HopWord<CR>", { noremap = true, silent = true })
 	end,
 }

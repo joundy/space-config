@@ -4,8 +4,18 @@ return {
 	tag = "v2.12.0",
 	lazy = true,
 	keys = {
-		{ "<Leader>tt", "<Cmd>ToggleTerm size=10 direction=horizontal<CR>", mode = { "n", "t" }, desc = "Toggle horizontal terminal" },
-		{ "<Leader>tv", "<Cmd>lua SpawnTerminalRight()<CR>", mode = { "n", "t" }, desc = "Spawn terminal to the right" },
+		{
+			"<Leader>tt",
+			"<Cmd>ToggleTerm size=10 direction=horizontal<CR>",
+			mode = { "n", "t" },
+			desc = "Toggle horizontal terminal",
+		},
+		{
+			"<Leader>tv",
+			"<Cmd>lua SpawnTerminalRight()<CR>",
+			mode = { "n", "t" },
+			desc = "Spawn terminal to the right",
+		},
 		{ "jk", [[<C-\><C-n>]], mode = "t", desc = "Exit terminal mode" },
 	},
 	opts = {
@@ -40,20 +50,5 @@ return {
 				vim.cmd("ToggleTerm")
 			end
 		end
-
-		-- Keymaps
-		local keymap = vim.keymap.set
-		keymap("n", "<Leader>tt", "<Cmd>ToggleTerm size=10 direction=horizontal<CR>", { noremap = true, silent = true })
-		keymap(
-			"t",
-			"<Leader>tt",
-			"<C-\\><C-n><Cmd>ToggleTerm size=10 direction=horizontal<CR>",
-			{ noremap = true, silent = true }
-		)
-
-		keymap("t", "jk", [[<C-\><C-n>]], { noremap = true, silent = true })
-
-		keymap("n", "<Leader>tv", SpawnTerminalRight, { noremap = true, silent = true })
-		keymap("t", "<Leader>tv", "<C-\\><C-n><Cmd>lua SpawnTerminalRight()<CR>", { noremap = true, silent = true })
 	end,
 }
