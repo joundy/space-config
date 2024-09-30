@@ -2,7 +2,8 @@ return {
 	{
 		"lewis6991/gitsigns.nvim",
 		tag = "v0.9.0",
-		lazy = false,
+		lazy = true,
+		event = { "BufReadPre", "BufNewFile" },
 		opts = {},
 		config = function(_, opts)
 			require("gitsigns").setup(opts)
@@ -12,7 +13,8 @@ return {
 		"tpope/vim-fugitive",
 		branch = "master",
 		commit = "d4877e54cef67f5af4f950935b1ade19ed6b7370",
-		lazy = false,
+		lazy = true,
+		cmd = { "Git", "Gdiffsplit" },
 		opts = {},
 		config = function()
 			local keymap = vim.keymap.set

@@ -8,7 +8,8 @@ return {
 		"hrsh7th/cmp-nvim-lsp",
 		branch = "main",
 		commit = "39e2eda76828d88b773cc27a3f61d2ad782c922d",
-		lazy = false,
+		lazy = true,
+		event = "InsertEnter",
 		priority = 2000,
 	},
 	{
@@ -19,18 +20,21 @@ return {
 						"saadparwaiz1/cmp_luasnip",
 						branch = "master",
 						commit = "05a9ab28b53f71d1aece421ef32fee2cb857a843",
-						lazy = false,
+						lazy = true,
+						event = "InsertEnter",
 					},
 					{
 						"rafamadriz/friendly-snippets",
 						branch = "main",
 						commit = "00ba9dd3df89509f95437b8d595553707c46d5ea",
-						lazy = false,
+						lazy = true,
+						event = "InsertEnter",
 					},
 				},
 				"L3MON4D3/LuaSnip",
 				tag = "v2.3.0",
-				lazy = false,
+				lazy = true,
+				event = "InsertEnter",
 				build = "make install_jsregexp",
 				config = function()
 					require("luasnip.loaders.from_vscode").lazy_load()
@@ -40,7 +44,8 @@ return {
 		"hrsh7th/nvim-cmp",
 		branch = "main",
 		commit = "ae644feb7b67bf1ce4260c231d1d4300b19c6f30",
-		lazy = false,
+		lazy = true,
+		event = "InsertEnter",
 		config = function()
 			local cmp = require("cmp")
 			local luasnip = require("luasnip")

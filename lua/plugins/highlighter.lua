@@ -1,7 +1,8 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
 	tag = "v0.9.2",
-	lazy = false,
+	lazy = true,
+	event = { "BufReadPost", "BufNewFile" },
 	opts = {
 		auto_install = true,
 		highlight = {

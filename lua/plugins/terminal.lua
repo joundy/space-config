@@ -2,7 +2,12 @@
 return {
 	"akinsho/toggleterm.nvim",
 	tag = "v2.12.0",
-	lazy = false,
+	lazy = true,
+	keys = {
+		{ "<Leader>tt", "<Cmd>ToggleTerm size=10 direction=horizontal<CR>", mode = { "n", "t" }, desc = "Toggle horizontal terminal" },
+		{ "<Leader>tv", "<Cmd>lua SpawnTerminalRight()<CR>", mode = { "n", "t" }, desc = "Spawn terminal to the right" },
+		{ "jk", [[<C-\><C-n>]], mode = "t", desc = "Exit terminal mode" },
+	},
 	opts = {
 		highlights = {
 			-- Clear the background of the status line
