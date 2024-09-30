@@ -1,12 +1,6 @@
 return {
   {
     priority = 1000,
-    "lewis6991/gitsigns.nvim",
-    tag = "v0.9.0",
-    lazy = false,
-  },
-  {
-    priority = 1000,
     "nvim-tree/nvim-web-devicons",
     branch = "master",
     commit = "1e5a2a796a88b5d696acb07dd5c285b13d13da21",
