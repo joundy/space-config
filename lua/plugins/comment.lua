@@ -1,6 +1,8 @@
 return {
 	{
 		"JoosepAlviste/nvim-ts-context-commentstring",
+		branch = "main",
+		commit = "44fd461b879d80a21d5041f312f070f22551c0bc",
 		lazy = true,
 		opts = {
 			enable_autocmd = false,
@@ -8,6 +10,7 @@ return {
 	},
 	{
 		"numToStr/Comment.nvim",
+		version = "v0.8.0",
 		event = { "BufReadPost", "BufNewFile" },
 		opts = {},
 		config = function(_, opts)
