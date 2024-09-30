@@ -30,11 +30,3 @@ for _, mode in ipairs({ "n", "i", "v" }) do
     map_resize(mode, key, cmd)
   end
 end
-
--- lsp_mappings.n["<leader>ld"] = { function() vim.diagnostic.open_float() end, desc = "Hover diagnostics" }
--- lsp_mappings.n["[d"] = { function() vim.diagnostic.goto_prev() end, desc = "Previous diagnostic" }
--- lsp_mappings.n["]d"] = { function() vim.diagnostic.goto_next() end, desc = "Next diagnostic" }
--- lsp_mappings.n["gl"] = { function() vim.diagnostic.open_float() end, desc = "Hover diagnostics" }
-
--- Diagnostic
-keymap("n", "<leader>ld", "<cmd>lua vim.diagnostic.open_float()<cr>", { noremap = true, silent = true })
