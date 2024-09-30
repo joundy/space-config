@@ -17,7 +17,7 @@ return {
 		cmd = { "Git", "Gdiffsplit" },
 		keys = {
 			{ "<leader>gd", ":Gdiffsplit<CR>", desc = "Git diff split" },
-			{ "<leader>gf", ":Git<CR>", desc = "Open Git status" },
+			{ "<leader>gf", ":Git<CR>",        desc = "Open Git status" },
 		},
 		opts = {},
 	},
