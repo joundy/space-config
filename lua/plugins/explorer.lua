@@ -3,6 +3,12 @@ return {
 	tag = "v1.7.0",
 	lazy = true,
 	cmd = { "NvimTreeToggle", "NvimTreeFocus" },
+	keys = {
+		{ "<Leader>ee", "<Cmd>NvimTreeToggle<CR>", desc = "Toggle NvimTree" },
+		{ "<Leader>er", "<Cmd>NvimTreeRefresh<CR>", desc = "Refresh NvimTree" },
+		{ "<Leader>ef", "<Cmd>NvimTreeFocus<CR>", desc = "Focus NvimTree" },
+		{ "<Leader>e/", "<Cmd>NvimTreeFindFile<CR>", desc = "Find file in NvimTree" },
+	},
 	opts = {
 		filters = {
 			dotfiles = false,
@@ -36,13 +42,5 @@ return {
 		-- vim.g.loaded_netrw = 1
 		-- vim.g.loaded_netrwPlugin = 1
 		require("nvim-tree").setup(opts)
-
-		-- Keymaps
-		local keymap = vim.keymap.set
-
-		keymap("n", "<Leader>ee", "<Cmd>NvimTreeToggle<CR>", { noremap = true })
-		keymap("n", "<Leader>er", "<Cmd>NvimTreeRefresh<CR>", { noremap = true })
-		keymap("n", "<Leader>ef", "<Cmd>NvimTreeFocus<CR>", { noremap = true })
-		keymap("n", "<Leader>e/", "<Cmd>NvimTreeFindFile<CR>", { noremap = true })
 	end,
 }
