@@ -1,8 +1,8 @@
 return {
 	"neovim/nvim-lspconfig",
-	tag = "v1.0.0",
+	version = "v0.1.7",
 	lazy = true,
-	event = { "BufReadPost", "BufNewFile" },
+	event = { "BufReadPre", "BufNewFile" },
 	priority = 2000,
 	config = function()
 		-- Keymaps
