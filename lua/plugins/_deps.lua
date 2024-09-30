@@ -1,22 +1,54 @@
 return {
 	{
-		priority = 20000,
 		"nvim-tree/nvim-web-devicons",
 		branch = "master",
 		commit = "1e5a2a796a88b5d696acb07dd5c285b13d13da21",
-		lazy = false,
 	},
 	{
-		priority = 15000,
 		"nvim-lualine/lualine.nvim",
 		branch = "master",
 		commit = "b431d228b7bbcdaea818bdc3e25b8cdbe861f056",
+	},
+	{
+		"nvim-lua/plenary.nvim",
+		tag = "v0.1.4",
+	},
+	{
+		"stevearc/dressing.nvim",
+		tag = "v3.0.0",
+	},
+	{
+		"MunifTanjim/nui.nvim",
+		tag = "0.3.0",
+	},
+	{
+		"zbirenbaum/copilot.lua",
+		branch = "master",
+		commit = "1a237cf50372830a61d92b0adf00d3b23882e0e1",
 		lazy = false,
 	},
 	{
-		priority = 20000,
-		"nvim-lua/plenary.nvim",
-		tag = "v0.1.4",
-		lazy = false,
+		"HakonHarnes/img-clip.nvim",
+		tag = "v0.5.0",
+		lazy = true,
+		event = "VeryLazy",
+		opts = {
+			default = {
+				embed_image_as_base64 = false,
+				prompt_for_file_name = false,
+				drag_and_drop = {
+					insert_mode = true,
+				},
+				use_absolute_path = true,
+			},
+		},
+	},
+	{
+		"MeanderingProgrammer/render-markdown.nvim",
+		tag = "v7.2.0",
+		opts = {
+			file_types = { "markdown", "Avante" },
+		},
+		ft = { "markdown", "Avante" },
 	},
 }
