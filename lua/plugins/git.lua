@@ -15,13 +15,10 @@ return {
 		commit = "d4877e54cef67f5af4f950935b1ade19ed6b7370",
 		lazy = true,
 		cmd = { "Git", "Gdiffsplit" },
+		keys = {
+			{ "<leader>gd", ":Gdiffsplit<CR>", desc = "Git diff split" },
+			{ "<leader>gf", ":Git<CR>", desc = "Open Git status" },
+		},
 		opts = {},
-		config = function()
-			local keymap = vim.keymap.set
-			local opts = { noremap = true, silent = true }
-
-			keymap("n", "<leader>gd", ":Gdiffsplit<CR>", opts)
-			keymap("n", "<leader>gf", ":Git<CR>", opts)
-		end,
 	},
 }
