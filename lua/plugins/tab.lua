@@ -9,21 +9,17 @@ return {
 		-- insert_at_start = true,
 		-- …etc.
 	},
+	keys = {
+		{ "<C-h>", "<Cmd>BufferPrevious<CR>", desc = "Previous buffer", mode = "n" },
+		{ "<C-l>", "<Cmd>BufferNext<CR>", desc = "Next buffer", mode = "n" },
+		{ "<C-j>", "<Cmd>BufferMovePrevious<CR>", desc = "Move buffer left", mode = "n" },
+		{ "<C-k>", "<Cmd>BufferMoveNext<CR>", desc = "Move buffer right", mode = "n" },
+		{ "<C-p>", "<Cmd>BufferPin<CR>", desc = "Pin buffer", mode = "n" },
+		{ "<Leader>bc", "<Cmd>BufferClose<CR>", desc = "Close buffer", mode = "n" },
+		{ "<Leader>bC", "<Cmd>BufferCloseAllButCurrentOrPinned<CR>", desc = "Close all buffers but current or pinned", mode = "n" },
+	},
 	config = function(_, opts)
 		require("barbar").setup(opts)
-
 		vim.g.barbar_auto_setup = false
-
-		-- Keymaps
-		local keymap = vim.keymap.set
-
-		keymap("n", "<C-h>", "<Cmd>BufferPrevious<CR>", { noremap = true, silent = true })
-		keymap("n", "<C-l>", "<Cmd>BufferNext<CR>", { noremap = true, silent = true })
-		keymap("n", "<C-j>", "<Cmd>BufferMovePrevious<CR>", { noremap = true, silent = true })
-		keymap("n", "<C-k>", "<Cmd>BufferMoveNext<CR>", { noremap = true, silent = true })
-		keymap("n", "<C-p>", "<Cmd>BufferPin<CR>", { noremap = true, silent = true })
-
-		keymap("n", "<Leader>bc", "<Cmd>BufferClose<CR>", { noremap = true, silent = true })
-		keymap("n", "<Leader>bC", "<Cmd>BufferCloseAllButCurrentOrPinned<CR>", { noremap = true, silent = true })
 	end,
 }
