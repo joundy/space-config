@@ -16,6 +16,7 @@ return {
 			end,
 			additional_vim_regex_highlighting = false,
 		},
+		ensure_installed = { "markdown", "markdown_inline" },
 	},
 	config = function(_, opts)
 		require("nvim-treesitter.configs").setup(opts)
