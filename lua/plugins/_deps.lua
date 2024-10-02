@@ -22,12 +22,6 @@ return {
 		version = "0.3.0",
 	},
 	{
-		"zbirenbaum/copilot.lua",
-		branch = "master",
-		commit = "1a237cf50372830a61d92b0adf00d3b23882e0e1",
-		lazy = false,
-	},
-	{
 		"HakonHarnes/img-clip.nvim",
 		version = "v0.5.0",
 		lazy = true,
