@@ -25,4 +25,16 @@ return {
 		commit = "d55d454bd3d5b027ebf0e8c75b8f88e4eddad8d8",
 		lazy = false,
 	},
+	{
+		"lukas-reineke/indent-blankline.nvim",
+		version = "v3.7.2",
+		event = { "BufReadPost", "BufNewFile" },
+		main = "ibl",
+		---@module "ibl"
+		---@type ibl.config
+		opts = {},
+		config = function(_, opts)
+			require("ibl").setup(opts)
+		end,
+	},
 }
