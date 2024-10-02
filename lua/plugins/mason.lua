@@ -2,6 +2,7 @@ local mason_lsp_ensure_installed = {
 	"ts_ls",
 	"eslint",
 	"gopls",
+	"lua_ls",
 }
 
 local mason_null_ls_ensure_installed = {
