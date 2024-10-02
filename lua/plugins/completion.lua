@@ -46,6 +46,16 @@ return {
 			-- 	commit = "031e6ba70b0ad5eee49fd2120ff7a2e325b17fa7",
 			-- 	event = { "BufReadPost", "BufNewFile" },
 			-- },
+			{
+				"zbirenbaum/copilot-cmp",
+				branch = "master",
+				commit = "b6e5286b3d74b04256d0a7e3bd2908eabec34b44",
+				lazy = false,
+				event = "InsertEnter",
+				config = function()
+					require("copilot_cmp").setup()
+				end,
+			},
 		},
 		"hrsh7th/nvim-cmp",
 		branch = "main",
@@ -92,6 +102,7 @@ return {
 					end, { "i", "s" }),
 				},
 				sources = cmp.config.sources({
+					{ name = "copilot" },
 					{ name = "nvim_lsp" },
 					{ name = "luasnip" }, -- For luasnip users.
 					-- { name = "nvim_lsp_signature_help" },
