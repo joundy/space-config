@@ -40,6 +40,12 @@ return {
 					require("luasnip.loaders.from_vscode").lazy_load()
 				end,
 			},
+			-- {
+			-- 	"hrsh7th/cmp-nvim-lsp-signature-help",
+			-- 	branch = "main",
+			-- 	commit = "031e6ba70b0ad5eee49fd2120ff7a2e325b17fa7",
+			-- 	event = { "BufReadPost", "BufNewFile" },
+			-- },
 		},
 		"hrsh7th/nvim-cmp",
 		branch = "main",
@@ -88,10 +94,20 @@ return {
 				sources = cmp.config.sources({
 					{ name = "nvim_lsp" },
 					{ name = "luasnip" }, -- For luasnip users.
+					-- { name = "nvim_lsp_signature_help" },
 				}, {
 					{ name = "buffer" },
 				}),
 			})
+		end,
+	},
+	{
+		"ray-x/lsp_signature.nvim",
+		version = "v0.3.1",
+		event = "VeryLazy",
+		opts = {},
+		config = function(_, opts)
+			require("lsp_signature").setup(opts)
 		end,
 	},
 }

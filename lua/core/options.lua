@@ -20,7 +20,7 @@ opt.foldcolumn = "1" -- show foldcolumn in nvim 0.9
 opt.history = 100 -- number of commands to remember in a history table
 opt.ignorecase = true -- case insensitive searching
 opt.infercase = true -- infer cases in keyword completion
--- opt.laststatus = 3 -- global statusline
+opt.laststatus = 3 -- global statusline
 opt.linebreak = true -- wrap lines at 'breakat'
 opt.mouse = "a" -- enable mouse support
 opt.number = true -- show numberline
@@ -37,9 +37,12 @@ opt.splitright = true -- splitting a new window at the right of the current one
 opt.tabstop = 2 -- number of space in a tab
 opt.termguicolors = true -- enable 24-bit RGB color in the TUI
 opt.timeoutlen = 500 -- shorten key timeout length a little bit for which-key
--- opt.title = true -- set terminal title to the filename and path
+opt.title = true -- set terminal title to the filename and path
 opt.undofile = true -- enable persistent undo
 opt.updatetime = 300 -- length of time to wait before triggering the plugin
 opt.virtualedit = "block" -- allow going past end of line in visual block mode
 opt.wrap = false -- disable wrapping of lines longer than the width of window
 opt.writebackup = false -- disable making a backup before overwriting a file
+
+vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" })
+vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" })
