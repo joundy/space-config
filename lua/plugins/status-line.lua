@@ -169,16 +169,12 @@ return {
 				local active_clients = {}
 
 				for _, client in ipairs(clients) do
-					local filetypes = client.config.filetypes
-					if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
-						-- Add the client name to the active_clients table
-						table.insert(active_clients, client.name)
-					end
+					table.insert(active_clients, client.name)
 				end
 
 				-- If there are active clients, join their names with a comma
 				if #active_clients > 0 then
-					return table.concat(active_clients, ", ")
+					return table.concat(active_clients, " | ")
 				end
 
 				return msg
