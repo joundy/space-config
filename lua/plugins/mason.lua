@@ -5,6 +5,7 @@ local mason_lsp_ensure_installed = {
   "lua_ls",
   "tailwindcss",
   "zls",
+  "prismals"
 }
 
 local mason_null_ls_ensure_installed = {

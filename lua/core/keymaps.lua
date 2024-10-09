@@ -30,3 +30,12 @@ for _, mode in ipairs({ "n", "i", "v" }) do
 		map_resize(mode, key, cmd)
 	end
 end
+
+-- can't set the vim-visual-multi inside the config, need to add this before the initialization
+vim.g.VM_default_mappings = 0
+vim.g.VM_maps = {
+	["Select h"] = "<Nop>", -- replace C-Left
+	["Select l"] = "<Nop>", -- replace C-Right
+	["Add Cursor Up"] = "<Nop>", -- replace C-Up
+	["Add Cursor Down"] = "<Nop>", -- replace C-Down
+}
