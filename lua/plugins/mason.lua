@@ -5,13 +5,16 @@ local mason_lsp_ensure_installed = {
   "lua_ls",
   "tailwindcss",
   "zls",
-  "prismals"
+  "prismals",
+  "rust_analyzer",
+  "pylsp"
 }
 
 local mason_null_ls_ensure_installed = {
   "stylua",
   "prettier",
   "golangci_lint",
+  "rustfmt"
 }
 
 return {
