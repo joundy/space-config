@@ -1,6 +1,6 @@
 return {
 	"neovim/nvim-lspconfig",
-	version = "v0.1.7",
+	version = "v1.0.0",
 	lazy = false,
 	priority = 2000,
 	keys = {
