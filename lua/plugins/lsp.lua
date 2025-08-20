@@ -13,7 +13,7 @@ return {
 			function()
 				local opts = {
 					border = { "┌", "─", "┐", "│", "┘", "─", "└", "│" }, -- You can customize the border symbols
-					win_opts = { -- Additional window options can be set here
+					win_opts = { -- Additional winuow options can be set here
 						winhighlight = "NormalFloat:NormalFloat,FloatBorder:FloatBorder",
 					},
 				}

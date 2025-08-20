@@ -26,3 +26,9 @@ require("lazy").setup("plugins", {
 -- These modules are not loaded by lazy
 require("core.options")
 require("core.keymaps")
+
+-- Trigger autoread when changing buffers or coming back to vim
+vim.api.nvim_create_autocmd({"FocusGained", "BufEnter", "CursorHold", "CursorHoldI"}, {
+  pattern = "*",
+  command = "checktime"
+})
