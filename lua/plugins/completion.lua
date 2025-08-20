@@ -13,55 +13,43 @@ return {
 		priority = 2000,
 	},
 	{
+		"saadparwaiz1/cmp_luasnip",
+		branch = "master",
+		commit = "05a9ab28b53f71d1aece421ef32fee2cb857a843",
+		lazy = true,
+		event = "InsertEnter",
+	},
+	{
+		"rafamadriz/friendly-snippets",
+		branch = "main",
+		commit = "00ba9dd3df89509f95437b8d595553707c46d5ea",
+		lazy = true,
+		event = "InsertEnter",
+	},
+	{
+		"L3MON4D3/LuaSnip",
+		version = "v2.3.0",
+		lazy = true,
+		event = "InsertEnter",
+		build = "make install_jsregexp",
 		dependencies = {
-			{
-				dependencies = {
-					{
-						"saadparwaiz1/cmp_luasnip",
-						branch = "master",
-						commit = "05a9ab28b53f71d1aece421ef32fee2cb857a843",
-						lazy = true,
-						event = "InsertEnter",
-					},
-					{
-						"rafamadriz/friendly-snippets",
-						branch = "main",
-						commit = "00ba9dd3df89509f95437b8d595553707c46d5ea",
-						lazy = true,
-						event = "InsertEnter",
-					},
-				},
-				"L3MON4D3/LuaSnip",
-				version = "v2.3.0",
-				lazy = true,
-				event = "InsertEnter",
-				build = "make install_jsregexp",
-				config = function()
-					require("luasnip.loaders.from_vscode").lazy_load()
-				end,
-			},
-			-- {
-			-- 	"hrsh7th/cmp-nvim-lsp-signature-help",
-			-- 	branch = "main",
-			-- 	commit = "031e6ba70b0ad5eee49fd2120ff7a2e325b17fa7",
-			-- 	event = { "BufReadPost", "BufNewFile" },
-			-- },
-			-- {
-			--   "zbirenbaum/copilot-cmp",
-			--   branch = "master",
-			--   commit = "b6e5286b3d74b04256d0a7e3bd2908eabec34b44",
-			--   lazy = false,
-			--   event = "InsertEnter",
-			--   config = function()
-			--     require("copilot_cmp").setup()
-			--   end,
-			-- },
+			"saadparwaiz1/cmp_luasnip",
+			"rafamadriz/friendly-snippets",
 		},
+		config = function()
+			require("luasnip.loaders.from_vscode").lazy_load()
+		end,
+	},
+	{
 		"hrsh7th/nvim-cmp",
 		branch = "main",
 		commit = "ae644feb7b67bf1ce4260c231d1d4300b19c6f30",
 		lazy = true,
 		event = "InsertEnter",
+		dependencies = {
+			"hrsh7th/cmp-nvim-lsp",
+			"L3MON4D3/LuaSnip",
+		},
 		config = function()
 			local cmp = require("cmp")
 			local luasnip = require("luasnip")
@@ -102,11 +90,8 @@ return {
 					end, { "i", "s" }),
 				},
 				sources = cmp.config.sources({
-					-- { name = "copilot" },
-					-- { name = "codeium" },
 					{ name = "nvim_lsp" },
-					{ name = "luasnip" }, -- For luasnip users.
-					-- { name = "nvim_lsp_signature_help" },
+					{ name = "luasnip" },
 				}, {
 					{ name = "buffer" },
 				}),

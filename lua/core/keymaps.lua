@@ -1,6 +1,3 @@
--- Set leader key to space
-vim.g.mapleader = " "
-
 local keymap = vim.keymap.set
 
 keymap("n", "<C-s>", "<cmd>w!<cr>", { noremap = true })
