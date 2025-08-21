@@ -1,23 +1,3 @@
--- function codeium_status()
---   local status = require("codeium.virtual_text").status()
---
---   if status.state == "idle" then
---     -- Output was cleared, for example when leaving insert mode
---     return "Codeium idle"
---   end
---
---   if status.state == "waiting" then
---     -- Waiting for response
---     return "Codeium Waiting..."
---   end
---
---   if status.state == "completions" and status.total > 0 then
---     return string.format("Codeium %d/%d", status.current, status.total)
---   end
---
---   return " 0 "
--- end
-
 return {
   "nvim-lualine/lualine.nvim",
   version = "compat-nvim-0.6",
@@ -183,16 +163,6 @@ return {
       end,
     })
 
-    -- ins_left({
-    --   function()
-    --     return codeium_status()
-    --   end,
-    --   color = { fg = "#3AC486", gui = "bold" },
-    --   -- cond = function()
-    --   --   return vim.fn.exists("*codeium#GetStatusString") == 1
-    --   -- end,
-    -- })
-
     ins_left({
       function()
         local msg = "No Active Lsp"
@@ -201,6 +171,7 @@ return {
 
         -- Create a table to hold the names of all active LSP clients
         local active_clients = {}
+        local client_names_set = {}
         local initializing = false
 
         for _, client in ipairs(clients) do
@@ -209,7 +180,11 @@ return {
             initializing = true
             client_name = client_name .. " (initializing)"
           end
-          table.insert(active_clients, client_name)
+          -- Only add if we haven't seen this client name before
+          if not client_names_set[client_name] then
+            client_names_set[client_name] = true
+            table.insert(active_clients, client_name)
+          end
         end
 
         -- If there are active clients, join their names with a comma
@@ -223,7 +198,7 @@ return {
 
         return msg
       end,
-      icon = " LSP:",
+      icon = "  LSP:",
       color = { fg = "#ffffff", gui = "bold" },
     })
 
