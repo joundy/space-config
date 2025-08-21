@@ -33,8 +33,16 @@ return {
 		event = "InsertEnter",
 		build = "make install_jsregexp",
 		dependencies = {
-			"saadparwaiz1/cmp_luasnip",
-			"rafamadriz/friendly-snippets",
+			{
+			  "saadparwaiz1/cmp_luasnip",
+			  branch = "master",
+			  commit = "98d9cb5c2c38532bd9bdb481067b20fea8f32e90",
+			},
+			{
+			  "rafamadriz/friendly-snippets",
+			  branch = "main",
+			  commit = "572f5660cf05f8cd8834e096d7b4c921ba18e175",
+			},
 		},
 		config = function()
 			require("luasnip.loaders.from_vscode").lazy_load()
