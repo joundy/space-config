@@ -1,6 +1,5 @@
 local mason_lsp_ensure_installed = {
 	"ts_ls",
-	"tsserver",
 	"eslint",
 	"gopls",
 	"lua_ls",
