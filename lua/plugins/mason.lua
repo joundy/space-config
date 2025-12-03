@@ -10,6 +10,7 @@ local mason_lsp_ensure_installed = {
 	-- "pylsp",
 	"intelephense",
 	"pyright",
+	"solidity_ls_nomicfoundation"
 }
 
 local mason_null_ls_ensure_installed = {
