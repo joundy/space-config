@@ -27,6 +27,13 @@ require("lazy").setup("plugins", {
 require("core.options")
 require("core.keymaps")
 
+-- Arduino filetype detection
+vim.filetype.add({
+  extension = {
+    ino = "arduino",
+  },
+})
+
 -- Trigger autoread when changing buffers or coming back to vim
 vim.api.nvim_create_autocmd({"FocusGained", "BufEnter", "CursorHold", "CursorHoldI"}, {
   pattern = "*",
